@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "song": "Ojitos Lindos",
+        "artist": "Bad Bunny",
+        "imageUrl": "https://images.genius.com/0c93db95b0db6cc1a030501845da4291.1000x1000x1.jpg",
+        "videoUrl": "https://youtu.be/tO0CQySQoCg"
+    },
+    {
+        "id": 2,
+        "song": "Hotel California",
+        "artist": "Eagles",
+        "imageUrl": "https://www.duetsblog.com/files/2017/01/Eagles-Album-Cover.jpg",
+        "videoUrl": "https://youtu.be/BciS5krYL80"
+    },
+    {
+        "id": 3,
+        "song": "Dilemma",
+        "artist": "Nelly",
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/81j+9IJewuL._RI_.jpg",
+        "videoUrl": "https://youtu.be/8WYHDfJDPDc"
+    },
+    {
+        "id": 4,
+        "song": "Enter Sandman",
+        "artist": "Metallica",
+        "imageUrl": "https://i1.sndcdn.com/artworks-000258189284-6xuusb-t500x500.jpg",
+        "videoUrl": "https://youtu.be/CD-E-LDc384"
+    },
+    {
+        "id": 5,
+        "song": "Bohemian Rhapsody",
+        "artist": "Queen",
+        "imageUrl": "https://pbs.twimg.com/profile_images/1080450214807298048/QUetVW1e_400x400.jpg",
+        "videoUrl": "https://youtu.be/fJ9rUzIMcZQ"
+    }    
+]
