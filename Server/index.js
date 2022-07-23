@@ -13,7 +13,10 @@ const {
     deleteSong,
 } = require('./controller');
 app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "../public"));
+    res.sendFile(path.join(__dirname, "../index.html"));
+})
+app.get("/", function(req, res){
+    res.sendFile(path.join(__dirname, "../add.html"));
 })
 app.get(`/api/songs`, getSongs);
 app.post(`/api/songs`, createSong);
