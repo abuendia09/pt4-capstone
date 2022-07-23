@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 
@@ -10,11 +11,14 @@ const {
     getSongs,
     createSong,
     deleteSong,
-} = require('./controller')
-
+} = require('./controller');
+app.get("/", function(req, res){
+    res.sendFile(path.join(__dirname, "../public"));
+})
 app.get(`/api/songs`, getSongs);
 app.post(`/api/songs`, createSong);
-app.delete(`/api/songs/:id`, deleteSong)
+app.delete(`/api/songs/:id`, deleteSong);
 
+const port = process.env.PORT || 4004
 
-app.listen(4004, () => console.log("Server running on 4004"))
+app.listen(port, () => console.log(`Server running on port ${port}`));
