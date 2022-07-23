@@ -1,8 +1,8 @@
-const songsContainer = document.querySelector('#songs-container')
+const main = document.querySelector('#main')
 const form = document.querySelector('form')
 
 const songsCallback = ({ data }) => displaySongs(data);
-const errCallback = err => console.log(err.response.data);
+const errCallback = err => console.log(err);
 
 const getSongs = () => axios.get(`http://localhost:4004/api/songs`).then(songsCallback).catch(errCallback);
 const deleteSong = id => axios.delete(`http://localhost:4004/api/songs/:${id}`).then(songsCallback).catch(errCallback)
@@ -12,8 +12,7 @@ function createSongCard(song) {
     const songCard = document.createElement('div')
     songCard.classList.add('song')
 
-    songCard.innerHTML = `<main id="main">
-    <div class="song">
+    songCard.innerHTML = ` 
     <img src=${song.imageUrl}>
     <div class="song-info">
         <h3>${song.title}</h3>
@@ -26,12 +25,12 @@ function createSongCard(song) {
     </div>
     <button onclick="deleteSong(${song.id})">delete</button>
     `
-    songsContainer.appendChild(songCard)
+    main.appendChild(songCard)
 }
 
 function displaySongs(arr) {
     console.log(arr);
-    songsContainer.innerHTML = ``
+    main.innerHTML = ``
     for (let i = 0; i < arr.length; i++) {
         createSongCard(arr[i])
     }

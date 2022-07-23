@@ -1,10 +1,14 @@
 const addSongButton = document.getElementById("addSongBtn");
 
-const songsCallback = ({ data }) => displaySongs(data);
-const errCallback = err => console.log(err.response.data);
+const errCallback = err => console.log(err);
 
-const createSong = body => axios.post(`http://localhost:4004/api/songs`, body).then(songsCallback).catch(errCallback)
-
+const createSong = body => {
+    axios.post(`http://localhost:4004/api/songs`, body)
+    .then(() => {
+        window.location.href = "index.html"
+    }) 
+    .catch(errCallback)
+}
 function submitHandler(e) {
     console.log("hitting it");
     e.preventDefault()

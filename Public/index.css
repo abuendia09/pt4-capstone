@@ -22,17 +22,15 @@ h1 {
     color: #F8F9FA;
 }
 
-.search {
-    background-color: transparent;
+A {
     border: 2px solid #212529;
-    padding: 0.5rem 1rem;
     border-radius: 50px;
     font-size: 1rem;
     color: #F8F9FA;
     font-family: inherit;
 }
 
-.search:focus {
+A:focus {
     outline: 0;
     background-color: #212529;
 }
@@ -52,7 +50,7 @@ main {
 
 .song img {
     width: 100%;
-
+    height: 30vh;
 }
 
 .song-info {
@@ -70,7 +68,6 @@ main {
 
 a:link, a:visited {
     background-color: #343A40;
-    color: white;
     padding: 15px 34.3px;
     text-align: center;
     text-decoration: none;
@@ -80,3 +77,17 @@ a:link, a:visited {
   a:hover, a:active {
     background-color: #212529;
   }
+
+button {
+        background-color: #343A40;
+        border: 2px solid #212529;
+        padding: 0.2rem 1rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        color: red;
+        font-family: inherit;
+        float: right;
+    }
+button:hover, button:active {
+    background-color: #212529;
+}
