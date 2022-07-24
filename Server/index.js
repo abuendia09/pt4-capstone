@@ -13,7 +13,7 @@ const {
     deleteSong,
 } = require('./controller');
 
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "/Public")));
 
 // app.get("/", function(req, res){
 //     res.sendFile(path.join(__dirname, "../public/index.html"));
