@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #343A40;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #212529;
@@ -15,7 +22,6 @@ h3 {
     color: #F8F9FA;
 }
 
-
 form #title, #artist, #image, #video {
     background-color: #343A40;
     border: 2px solid #212529;
@@ -26,7 +32,7 @@ form #title, #artist, #image, #video {
     font-family: inherit;
 }
 
-form #song:focus, #artist:focus, #img:focus, #video:focus {
+form #title:focus, #artist:focus, #image:focus, #video:focus {
     outline: 0;
     background-color: #212529;
 }
@@ -40,3 +46,23 @@ form #song:focus, #artist:focus, #img:focus, #video:focus {
     color: #F8F9FA;
     font-family: inherit;
 }
+
+A {
+    border: 2px solid #212529;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #F8F9FA;
+    font-family: inherit;
+}
+
+a:link, a:visited {
+    background-color: #343A40;
+    padding: 15px 34.3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: #212529;
+  }
