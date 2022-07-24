@@ -3,8 +3,8 @@ const main = document.querySelector('#main')
 const songsCallback = ({ data }) => displaySongs(data);
 const errCallback = err => console.log(err);
 
-const getSongs = () => axios.get(`http://localhost:4004/api/songs`).then(songsCallback).catch(errCallback);
-const deleteSong = id => axios.delete(`http://localhost:4004/api/songs/:${id}`).then(songsCallback).catch(errCallback)
+const getSongs = () => axios.get(`/api/songs`).then(songsCallback).catch(errCallback);
+const deleteSong = id => axios.delete(`/api/songs/:${id}`).then(songsCallback).catch(errCallback)
 
 
 function createSongCard(song) {

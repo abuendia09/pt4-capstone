@@ -3,7 +3,7 @@ const addSongButton = document.getElementById("addSongBtn");
 const errCallback = err => console.log(err);
 
 const createSong = body => {
-    axios.post(`http://localhost:4004/api/songs`, body)
+    axios.post(`/api/songs`, body)
     .then(() => {
         window.location.href = "index.html"
     }) 
