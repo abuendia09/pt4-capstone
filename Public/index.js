@@ -1,5 +1,4 @@
 const main = document.querySelector('#main')
-const form = document.querySelector('form')
 
 const songsCallback = ({ data }) => displaySongs(data);
 const errCallback = err => console.log(err);
