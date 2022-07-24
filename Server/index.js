@@ -13,24 +13,20 @@ const {
     deleteSong,
 } = require('./controller');
 
-app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-})
-app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "../public/add.html"));
-})
-app.get("/styles", function(req, res){
-    res.sendFile(path.join(__dirname, "../public/index.css"));
-})
-app.get("/styles", function(req, res){
-    res.sendFile(path.join(__dirname, "../public/add.css"));
-})
-app.get("/js", function(req, res){
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-})
-app.get("/js", function(req, res){
-    res.sendFile(path.join(__dirname, "../public/add.html"));
-})
+app.use(express.static(path.join(__dirname, "/public")));
+
+// app.get("/", function(req, res){
+//     res.sendFile(path.join(__dirname, "../public/index.html"));
+// })
+// app.get("/", function(req, res){
+//     res.sendFile(path.join(__dirname, "../public/add.html"));
+// })
+// app.get("/styles", function(req, res){
+//     res.sendFile(path.join(__dirname, "../public/index.css"));
+// })
+// app.get("/styles", function(req, res){
+//     res.sendFile(path.join(__dirname, "../public/add.css"));
+// })
 
 app.get(`/api/songs`, getSongs);
 app.post(`/api/songs`, createSong);
